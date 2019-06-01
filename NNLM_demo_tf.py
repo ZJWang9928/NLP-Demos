@@ -21,7 +21,7 @@ n_step = 2 # number of steps ['i like', 'i love', 'i hate']
 n_hidden = 2 # number of hidden units
 
 def make_batch(sentences):
-    input_batch = []
+    input_batch = [
     target_batch = []
 
     for sen in sentences:
