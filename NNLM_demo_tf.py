@@ -21,7 +21,7 @@ n_step = 2 # number of steps ['i like', 'i love', 'i hate']
 n_hidden = 2 # number of hidden units
 
 def make_batch(sentences):
-    input_batch = [
+    input_batch = []
     target_batch = []
 
     for sen in sentences:
@@ -33,6 +33,8 @@ def make_batch(sentences):
         target_batch.append(np.eye(n_class)[target])
 
     return input_batch, target_batch
+
+# print(make_batch(sentences))
 
 # NNLM model
 X = tf.placeholder(tf.float32, [None, n_step, n_class]) # [batch_size, number of steps, number of Vocabulary]
